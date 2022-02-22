@@ -4,7 +4,7 @@ import address.data.AddressEntry;
 
 import java.util.TreeMap;
 
-public class AddressBook {
+public class AddressBook {.
     /**
      * collection variable to store set of AddressEntry objects that currently in AddressBook
      */

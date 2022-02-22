@@ -1,6 +1,6 @@
 package address;
 
-public class Menu {
+public class Menu {.
 
 
     /**

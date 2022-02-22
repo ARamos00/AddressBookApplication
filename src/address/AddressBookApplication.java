@@ -7,8 +7,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
-public class AddressBookApplication {
-
+public class AddressBookApplication {.
     public static void main(String[] args) {
 //        /**
 //         * Creates instance of menu
