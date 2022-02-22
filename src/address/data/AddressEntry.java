@@ -5,39 +5,39 @@ public class AddressEntry {
     /**
      * Declaration of firstName member variable.
      */
-    String firstName;
+    private String firstName;
     /**
      * Declaration of lastName member variable.
      */
-    String lastName;
+    private String lastName;
     /**
      * Declaration of street member variable.
      */
-    String street;
+    private String street;
     /**
      * Declaration of city member variable.
      */
-    String city;
+    private String city;
     /**
      * Declaration of state member variable.
      */
-    String state;
+    private String state;
     /**
      * Declaration of zip member variable.
      */
-    Integer zip;
+    private Integer zip;
     /**
      * Declaration of phone member variable.
      */
-    String phone;
+    private String phone;
     /**
      * Declaration of email member variable.
      */
-    String email;
+    private String email;
 
 
     /**
-     * constructor for AddressEntry
+     * Default constructor for AddressEntry
      */
      public AddressEntry(){
         firstName = "";
@@ -62,6 +62,7 @@ public class AddressEntry {
      * @param email
      */
     public AddressEntry(String firstName,String lastName, String street, String city, String state, Integer zip, String phone, String email){
+        //Initializing class variables.
         this.firstName = firstName;
         this.lastName = lastName;
         this.street = street;
@@ -106,6 +107,7 @@ public class AddressEntry {
     public String getFirstName() {
         return firstName;
     }
+
     /**
      * setter for lastName
      * @param lastName
@@ -113,6 +115,7 @@ public class AddressEntry {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
     /**
      * getter for lastName
      * @return lastName
@@ -120,6 +123,7 @@ public class AddressEntry {
     public String getLastName() {
         return lastName;
     }
+
     /**
      * setter for street
      * @param street
@@ -127,6 +131,7 @@ public class AddressEntry {
     public void setStreet(String street) {
         this.street = street;
     }
+
     /**
      * getter for street
      * @return street
@@ -134,6 +139,7 @@ public class AddressEntry {
     public String getStreet() {
         return street;
     }
+
     /**
      * setter for city
      * @param city
@@ -141,6 +147,7 @@ public class AddressEntry {
     public void setCity(String city) {
         this.city = city;
     }
+
     /**
      * getter for  city
      * @return  city
@@ -148,6 +155,7 @@ public class AddressEntry {
     public String getCity() {
         return city;
     }
+
     /**
      * setter for state
      * @param state
@@ -155,6 +163,7 @@ public class AddressEntry {
     public void setState(String state) {
         this.state = state;
     }
+
     /**
      * getter for  state
      * @return  state
@@ -162,6 +171,7 @@ public class AddressEntry {
     public String getState() {
         return state;
     }
+
     /**
      * setter for zip
      * @param zip
@@ -169,6 +179,7 @@ public class AddressEntry {
     public void setZip(Integer zip) {
         this.zip = zip;
     }
+
     /**
      * getter for  zip
      * @return  zip
@@ -176,6 +187,7 @@ public class AddressEntry {
     public Integer getZip() {
         return zip;
     }
+
     /**
      * setter for phone
      * @param phone
@@ -183,6 +195,7 @@ public class AddressEntry {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
     /**
      * getter for  phone
      * @return  phone
@@ -190,6 +203,7 @@ public class AddressEntry {
     public String getPhone() {
         return phone;
     }
+
     /**
      * setter for email
      * @param email
@@ -197,6 +211,7 @@ public class AddressEntry {
     public void setEmail(String email) {
         this.email = email;
     }
+
     /**
      * getter for  email
      * @return  email
