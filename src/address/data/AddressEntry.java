@@ -1,6 +1,6 @@
 package address.data;
 
-public class AddressEntry {.
+public class AddressEntry {
 
     /**
      * Declaration of firstName member variable.
