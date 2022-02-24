@@ -9,51 +9,51 @@ import java.util.Scanner;
 
 public class AddressBookApplication {
     public static void main(String[] args) {
-        /**
-         * Creates instance of menu
-         */
+        AddressBook ab = new AddressBook();
       Menu myMenu = new Menu();
-      myMenu.displayMenu();
-
-
+      Scanner input = new Scanner(System.in);
       String choice = "";
-      while(!choice.equals("f")){
+      while(true){
+          //creates menu
+          myMenu.displayMenu();
+          choice = input.nextLine();
           switch (choice) {
-              case "a" -> System.out.println("Choice A!!");
-              case "b" -> System.out.println("Choice B!!");
-              case "c" -> System.out.println("Choice C!!");
-              case "d" -> System.out.println("Choice D!!");
-              case "e" -> System.out.println("Choice E!!");
-              case "f" -> System.out.println("Choice F!!");
+              case "a":
+                  System.out.println("Enter the file name (FileName.txt)");
+                  Scanner fileNameInput = new Scanner(System.in);
+                  String fileName = "";
+                  fileName = fileNameInput.nextLine();
+                  ab.loadEntriesFromFile(fileName);
+                  break;
+              case "b":
+                  ab.additionManualInput();
+                  break;
+              case "c":
+                  System.out.println("Please enter the First and Last Name (FirstNameLastName) of contact to remove:");
+                  Scanner removeKeyInput = new Scanner(System.in);
+                  String removeKey = "";
+                  removeKey = removeKeyInput.nextLine();
+                  ab.removalAddressEntry(removeKey);
+
+                  break;
+              case "d":
+                  System.out.println("Enter the First and Last Name (FirstNameLastName) of contact to find:");
+                  Scanner findKeyInput = new Scanner(System.in);
+                  String findKey = "";
+                  findKey = findKeyInput.nextLine();
+                  ab.findAddressEntry(findKey);
+                  break;
+              case "e":
+                  ab.list();
+                  break;
+              case "f":
+                  System.out.println("Exiting menu...");
+                  System.exit(0);
+                  break;
+              default:
+                  System.out.println(choice + " is not a valid input. Choose another option");
           }
-
-
       }
-//        AddressBook ab = new AddressBook();
-//        init(ab);
-    }
 
-
-    static void init(AddressBook ab){
-        try{
-            File tempFile = new File("temp.txt");
-            Scanner tempReader = new Scanner(tempFile);
-            while (tempReader.hasNextLine()){
-                    String firstName = tempReader.nextLine();
-                    String lastName = tempReader.nextLine();
-                    String street = tempReader.nextLine();
-                    String city = tempReader.nextLine();
-                    String state = tempReader.nextLine();
-                    String zip = tempReader.nextLine();
-                    String email = tempReader.nextLine();
-                    String phone = tempReader.nextLine();
-                AddressEntry temp1 = new AddressEntry(firstName,lastName,street,city,state,Integer.parseInt(zip),phone,email);
-                ab.add(temp1);
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Error");
-            e.printStackTrace();
-        }
-        ab.list();
     }
 }
